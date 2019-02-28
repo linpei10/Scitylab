@@ -1,0 +1,308 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    	<style>
+		#container1{width:100%; height:508px; margin-top:0;}
+		#FontScroll{width:685px;height:30px;line-height:30px;overflow:Hidden;float:left;margin-top:3px;}
+	</style>
+{% endblock %}
+
+{% block body %}
+{#                轮播图#}
+                <div class="outer">
+                    <ul class="imgs">
+                        <li><a><img src="/static/img/home/banner1.png"></a></li>
+                        <li><a><img src="/static/img/home/banner2.png"></a></li>
+                        <li><a><img src="/static/img/home/banner3.png"></a></li>
+                        <li><a><img src="/static/img/home/banner4.png"></a></li>
+                    </ul>
+
+                    <ul class="num">
+                        <li class="current_1">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+
+                    <div class="left_btn btns"><</div>
+                    <div class="right_btn btns">></div>
+
+              </div>
+{#                    <div class="slides_container" style="overflow: hidden; position: relative;">#}
+{#                        <div class="slides_control" style="position: relative; width: 4200px; height: 0; left: -1400px;"><div style="position: absolute; top: 0; left: 1400px; z-index: 0; display: none;">#}
+{##}
+{#                            <a href="http://www.scitylab.org/html/" id="qyuef"><img src="/static/img/home/banner1.png" border="0"></a>#}
+{#                        </div><div style="position: absolute; top: 0; left: 1400px; z-index: 0; display: none;">#}
+{##}
+{#                            <a href="http://www.scitylab.org/html/" id="qyuef"><img src="/static/img/home/banner2.png" border="0"></a>#}
+{#                        </div><div style="position: absolute; top: 0; left: 1400px; z-index: 5; display: block;">#}
+{##}
+{#                            <a href="http://www.scitylab.org/html/" id="qyuef"><img src="/static/img/home/banner3.png" border="0"></a>#}
+{#                        </div><div style="position: absolute; top: 0; left: 2800px; z-index: 0; display: block;">#}
+{##}
+{#                            <a href="http://www.scitylab.org/html/" id="qyuef"><img src="/static/img/home/banner4.png" border="0"></a>#}
+{#                        </div></div>#}
+{#                    </div>#}
+{##}
+
+
+
+    <div class="index_main_top">
+               <div class="index_main_top0">
+               <div class="p_news">
+                   <h2>News│新闻</h2>
+                   <div id="FontScroll">
+                   <div class="bd">
+                       <div class="tempWrap" style="overflow:hidden; position:relative; width:2240px"><ul style="width: 94080px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -31915px;"><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/182.html">&nbsp;<strong>征集|IEC智慧城市系统委员会WG2工作组征集专家</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/181.html">&nbsp;<strong>记录片|回顾过往，展望未来，直击“智慧城市十年”</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/180.html">&nbsp;<strong>智慧城市联合实验室年会启幕报名</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/179.html">&nbsp;<strong>标准|ISO/TC268/SC1全会在莫斯科顺利召开</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/178.html">&nbsp;<strong>仿真|城市大数据及城市仿真论坛在北京召开</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/177.html">&nbsp;<strong>邀请函|2018（第七届）国际智慧城市峰会暨智慧城市创新生态博览会</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/176.html">&nbsp;<strong>【深圳特区报】万碧玉：城市仿真、人工智能将成为智慧城市建设下一片蓝海</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/175.html">&nbsp;<strong>【课题】关于商请参与县域智慧城市课题函</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/174.html">&nbsp;<strong>【通知】ISO智慧城市国际标准试点讨论会将在珠海召开</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/173.html">&nbsp;<strong>万碧玉：国内掀起第二轮智慧城市建设热潮</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/163.html">&nbsp;<strong>【观点】万碧玉：城市仿真助力城市可持续发展</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/162.html">&nbsp;<strong>【标准】中国计划在ISO珠海会议发起城市仿真提案</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/160.html">&nbsp;<strong>智慧城市发展沙龙暨城科会智慧城市联合实验室年会在京举行</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/159.html">&nbsp;【年度盘点】智慧城市2017回顾与展望...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/158.html">&nbsp;“地平线2020计划”申报成功！...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/157.html">&nbsp;【科研】2017智慧城市产业景气指数即将发布...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/156.html">&nbsp;ISO智慧城市国际标准试点启动并发布成都共识...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/154.html">&nbsp;【征集】智慧城市创新技术及产品征集...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/153.html">&nbsp;【标准】ISO智慧城市试点申报将持续至9月中旬...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/152.html">&nbsp;<strong>【热点资讯】国际标准试点初选名单发布</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/151.html">&nbsp;【政策文件】国家发展改革委 中央网信办关于印发《政务信息资源目录编制指...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/150.html">&nbsp;【标准】城市仍可申报ISO试点...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/149.html">&nbsp;【征集】德国能源署面向全球征集创新技术 获奖者可获得数万欧元...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/148.html">&nbsp;国际（上海）智慧城市标准化高峰论坛在上海举行...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/147.html">&nbsp;全国首家智慧城市学院在北京联合大学成立...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/146.html">&nbsp;ISO智慧城市标准试点初审会在京召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/145.html">&nbsp;【国际试点】国际标准化组织全球遴选10城市开展智慧城市标准试点工作...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/144.html">&nbsp;标准｜智慧城市多项重点标准将在今年完成...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/143.html">&nbsp;关于征集“2017全球智慧城市高峰论坛暨国际智慧城市博览会·上海浦东”论文的...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/142.html">&nbsp;关于公开征集ISO/TC268/SC1/WG4国际标准专家的通知...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/141.html">&nbsp;国际（厦门）智慧城市标准化高峰论坛在厦门召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/140.html">&nbsp;IEC智慧城市国际标准会议6月将在沪召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/139.html">&nbsp;ISO设立智慧城市标准试点与评价工作组...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/138.html">&nbsp;ISO首个智慧城市基础设施数据标准正式立项...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/137.html">&nbsp;“2017国际智慧城市高峰论坛”会议方案（拟）...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/136.html">&nbsp;关于举办“2017全球智慧城市高峰论坛暨国际智慧城市博览会·上海浦东”的预通...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/135.html">&nbsp;【盘点】中国智慧城市2016年度大事盘点...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/134.html">&nbsp;智慧城市联合实验室智慧城市交流会暨2016年会召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/133.html">&nbsp;【发文】新型智慧城市建设部际协调工作组正式启动新型智慧城市评价工作...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/132.html">&nbsp;2016年度中国城市科学研究会课题启动会成功召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/131.html">&nbsp;国务院印发《“十三五”国家科技创新规划》（全文）...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/130.html">&nbsp;万碧玉：中国城镇化过快将加大城市压力...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/129.html">&nbsp;仇保兴：深度城镇化——未来增强我国经济活力和可持续发展能力的重要策略...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/128.html">&nbsp;【招聘】中国城市科学研究会智慧城市联合实验室招聘实习生开展课题研究工作...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/127.html">&nbsp;中国城市科学研究会2016年度智慧城市课题预申报通知...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/126.html">&nbsp;2016全球智慧城市高峰论坛暨国际智慧城市博览会·上海浦东顺利召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/125.html">&nbsp;2016 Smart City Research Topic Alternatives issued by Chinese Society for Urban Studies...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/123.html">&nbsp;2016年度智慧城市课题备选项目征集指南解读...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/122.html">&nbsp;关于发布中国城市科学研究会2016年度智慧城市课题 备选项目征集指南的通知...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/121.html">&nbsp;【通知】关于发布中国城市科学研究会2016年度智慧城市课题 备选项目征集指南...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/120.html">&nbsp;【论坛】2016全球智慧城市高峰论坛将于6月盛大开幕...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/106.html">&nbsp;国家标准委对11项智慧城市标准公开征集意见...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/105.html">&nbsp;国家智慧城市标准化工作会议将于11日召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/104.html">&nbsp;第十届中国城镇水务大会...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/62.html">&nbsp;首批智慧城市联合实验室集中揭牌...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/60.html">&nbsp;中德推进智慧城市标准化合作...</a></li>
+                            <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/182.html">&nbsp;<strong>征集|IEC智慧城市系统委员会WG2工作组征集专家</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/181.html">&nbsp;<strong>记录片|回顾过往，展望未来，直击“智慧城市十年”</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/180.html">&nbsp;<strong>智慧城市联合实验室年会启幕报名</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/179.html">&nbsp;<strong>标准|ISO/TC268/SC1全会在莫斯科顺利召开</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/178.html">&nbsp;<strong>仿真|城市大数据及城市仿真论坛在北京召开</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/177.html">&nbsp;<strong>邀请函|2018（第七届）国际智慧城市峰会暨智慧城市创新生态博览会</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/176.html">&nbsp;<strong>【深圳特区报】万碧玉：城市仿真、人工智能将成为智慧城市建设下一片蓝海</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/175.html">&nbsp;<strong>【课题】关于商请参与县域智慧城市课题函</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/174.html">&nbsp;<strong>【通知】ISO智慧城市国际标准试点讨论会将在珠海召开</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/173.html">&nbsp;<strong>万碧玉：国内掀起第二轮智慧城市建设热潮</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/163.html">&nbsp;<strong>【观点】万碧玉：城市仿真助力城市可持续发展</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/162.html">&nbsp;<strong>【标准】中国计划在ISO珠海会议发起城市仿真提案</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/160.html">&nbsp;<strong>智慧城市发展沙龙暨城科会智慧城市联合实验室年会在京举行</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/159.html">&nbsp;【年度盘点】智慧城市2017回顾与展望...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/158.html">&nbsp;“地平线2020计划”申报成功！...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/157.html">&nbsp;【科研】2017智慧城市产业景气指数即将发布...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/156.html">&nbsp;ISO智慧城市国际标准试点启动并发布成都共识...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/154.html">&nbsp;【征集】智慧城市创新技术及产品征集...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/153.html">&nbsp;【标准】ISO智慧城市试点申报将持续至9月中旬...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/152.html">&nbsp;<strong>【热点资讯】国际标准试点初选名单发布</strong>...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/151.html">&nbsp;【政策文件】国家发展改革委 中央网信办关于印发《政务信息资源目录编制指...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/150.html">&nbsp;【标准】城市仍可申报ISO试点...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/149.html">&nbsp;【征集】德国能源署面向全球征集创新技术 获奖者可获得数万欧元...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/148.html">&nbsp;国际（上海）智慧城市标准化高峰论坛在上海举行...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/147.html">&nbsp;全国首家智慧城市学院在北京联合大学成立...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/146.html">&nbsp;ISO智慧城市标准试点初审会在京召开...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/145.html">&nbsp;【国际试点】国际标准化组织全球遴选10城市开展智慧城市标准试点工作...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/144.html">&nbsp;标准｜智慧城市多项重点标准将在今年完成...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/143.html">&nbsp;关于征集“2017全球智慧城市高峰论坛暨国际智慧城市博览会·上海浦东”论文的...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/142.html">&nbsp;关于公开征集ISO/TC268/SC1/WG4国际标准专家的通知...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/141.html">&nbsp;国际（厦门）智慧城市标准化高峰论坛在厦门召开...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/140.html">&nbsp;IEC智慧城市国际标准会议6月将在沪召开...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/139.html">&nbsp;ISO设立智慧城市标准试点与评价工作组...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/138.html">&nbsp;ISO首个智慧城市基础设施数据标准正式立项...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/137.html">&nbsp;“2017国际智慧城市高峰论坛”会议方案（拟）...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/136.html">&nbsp;关于举办“2017全球智慧城市高峰论坛暨国际智慧城市博览会·上海浦东”的预通...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/135.html">&nbsp;【盘点】中国智慧城市2016年度大事盘点...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/134.html">&nbsp;智慧城市联合实验室智慧城市交流会暨2016年会召开...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/133.html">&nbsp;【发文】新型智慧城市建设部际协调工作组正式启动新型智慧城市评价工作...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/132.html">&nbsp;2016年度中国城市科学研究会课题启动会成功召开...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/131.html">&nbsp;国务院印发《“十三五”国家科技创新规划》（全文）...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/130.html">&nbsp;万碧玉：中国城镇化过快将加大城市压力...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/129.html">&nbsp;仇保兴：深度城镇化——未来增强我国经济活力和可持续发展能力的重要策略...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/128.html">&nbsp;【招聘】中国城市科学研究会智慧城市联合实验室招聘实习生开展课题研究工作...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/127.html">&nbsp;中国城市科学研究会2016年度智慧城市课题预申报通知...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/126.html">&nbsp;2016全球智慧城市高峰论坛暨国际智慧城市博览会·上海浦东顺利召开...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/125.html">&nbsp;2016 Smart City Research Topic Alternatives issued by Chinese Society for Urban Studies...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/123.html">&nbsp;2016年度智慧城市课题备选项目征集指南解读...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/122.html">&nbsp;关于发布中国城市科学研究会2016年度智慧城市课题 备选项目征集指南的通知...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/121.html">&nbsp;【通知】关于发布中国城市科学研究会2016年度智慧城市课题 备选项目征集指南...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/120.html">&nbsp;【论坛】2016全球智慧城市高峰论坛将于6月盛大开幕...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/106.html">&nbsp;国家标准委对11项智慧城市标准公开征集意见...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/105.html">&nbsp;国家智慧城市标准化工作会议将于11日召开...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/104.html">&nbsp;第十届中国城镇水务大会...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/62.html">&nbsp;首批智慧城市联合实验室集中揭牌...</a></li>
+    <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/60.html">&nbsp;中德推进智慧城市标准化合作...</a></li>
+
+                       <li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/182.html">&nbsp;<strong>征集|IEC智慧城市系统委员会WG2工作组征集专家</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/181.html">&nbsp;<strong>记录片|回顾过往，展望未来，直击“智慧城市十年”</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/180.html">&nbsp;<strong>智慧城市联合实验室年会启幕报名</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/179.html">&nbsp;<strong>标准|ISO/TC268/SC1全会在莫斯科顺利召开</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/178.html">&nbsp;<strong>仿真|城市大数据及城市仿真论坛在北京召开</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/177.html">&nbsp;<strong>邀请函|2018（第七届）国际智慧城市峰会暨智慧城市创新生态博览会</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/176.html">&nbsp;<strong>【深圳特区报】万碧玉：城市仿真、人工智能将成为智慧城市建设下一片蓝海</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/175.html">&nbsp;<strong>【课题】关于商请参与县域智慧城市课题函</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/174.html">&nbsp;<strong>【通知】ISO智慧城市国际标准试点讨论会将在珠海召开</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/173.html">&nbsp;<strong>万碧玉：国内掀起第二轮智慧城市建设热潮</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/163.html">&nbsp;<strong>【观点】万碧玉：城市仿真助力城市可持续发展</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/162.html">&nbsp;<strong>【标准】中国计划在ISO珠海会议发起城市仿真提案</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/160.html">&nbsp;<strong>智慧城市发展沙龙暨城科会智慧城市联合实验室年会在京举行</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/159.html">&nbsp;【年度盘点】智慧城市2017回顾与展望...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/158.html">&nbsp;“地平线2020计划”申报成功！...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/157.html">&nbsp;【科研】2017智慧城市产业景气指数即将发布...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/156.html">&nbsp;ISO智慧城市国际标准试点启动并发布成都共识...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/154.html">&nbsp;【征集】智慧城市创新技术及产品征集...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/153.html">&nbsp;【标准】ISO智慧城市试点申报将持续至9月中旬...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/152.html">&nbsp;<strong>【热点资讯】国际标准试点初选名单发布</strong>...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/151.html">&nbsp;【政策文件】国家发展改革委 中央网信办关于印发《政务信息资源目录编制指...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/150.html">&nbsp;【标准】城市仍可申报ISO试点...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/149.html">&nbsp;【征集】德国能源署面向全球征集创新技术 获奖者可获得数万欧元...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/148.html">&nbsp;国际（上海）智慧城市标准化高峰论坛在上海举行...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/147.html">&nbsp;全国首家智慧城市学院在北京联合大学成立...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/146.html">&nbsp;ISO智慧城市标准试点初审会在京召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/145.html">&nbsp;【国际试点】国际标准化组织全球遴选10城市开展智慧城市标准试点工作...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/144.html">&nbsp;标准｜智慧城市多项重点标准将在今年完成...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/143.html">&nbsp;关于征集“2017全球智慧城市高峰论坛暨国际智慧城市博览会·上海浦东”论文的...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/142.html">&nbsp;关于公开征集ISO/TC268/SC1/WG4国际标准专家的通知...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/141.html">&nbsp;国际（厦门）智慧城市标准化高峰论坛在厦门召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/140.html">&nbsp;IEC智慧城市国际标准会议6月将在沪召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/139.html">&nbsp;ISO设立智慧城市标准试点与评价工作组...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/138.html">&nbsp;ISO首个智慧城市基础设施数据标准正式立项...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/137.html">&nbsp;“2017国际智慧城市高峰论坛”会议方案（拟）...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/136.html">&nbsp;关于举办“2017全球智慧城市高峰论坛暨国际智慧城市博览会·上海浦东”的预通...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/135.html">&nbsp;【盘点】中国智慧城市2016年度大事盘点...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/134.html">&nbsp;智慧城市联合实验室智慧城市交流会暨2016年会召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/133.html">&nbsp;【发文】新型智慧城市建设部际协调工作组正式启动新型智慧城市评价工作...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/132.html">&nbsp;2016年度中国城市科学研究会课题启动会成功召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/131.html">&nbsp;国务院印发《“十三五”国家科技创新规划》（全文）...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/130.html">&nbsp;万碧玉：中国城镇化过快将加大城市压力...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/129.html">&nbsp;仇保兴：深度城镇化——未来增强我国经济活力和可持续发展能力的重要策略...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/128.html">&nbsp;【招聘】中国城市科学研究会智慧城市联合实验室招聘实习生开展课题研究工作...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/127.html">&nbsp;中国城市科学研究会2016年度智慧城市课题预申报通知...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/126.html">&nbsp;2016全球智慧城市高峰论坛暨国际智慧城市博览会·上海浦东顺利召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/125.html">&nbsp;2016 Smart City Research Topic Alternatives issued by Chinese Society for Urban Studies...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/123.html">&nbsp;2016年度智慧城市课题备选项目征集指南解读...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/122.html">&nbsp;关于发布中国城市科学研究会2016年度智慧城市课题 备选项目征集指南的通知...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/121.html">&nbsp;【通知】关于发布中国城市科学研究会2016年度智慧城市课题 备选项目征集指南...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/120.html">&nbsp;【论坛】2016全球智慧城市高峰论坛将于6月盛大开幕...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/106.html">&nbsp;国家标准委对11项智慧城市标准公开征集意见...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/105.html">&nbsp;国家智慧城市标准化工作会议将于11日召开...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs2/104.html">&nbsp;第十届中国城镇水务大会...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/62.html">&nbsp;首批智慧城市联合实验室集中揭牌...</a></li><li style="float: left; width: 520px;"> <a href="http://www.scitylab.org/html/new/cs1/60.html">&nbsp;中德推进智慧城市标准化合作...</a></li></ul></div>
+                    </div>
+    <script type="text/javascript">jQuery("#FontScroll").slide({ mainCell:".bd ul",effect:"leftMarquee",vis:4,interTime:40,autoPlay:true });</script>
+                   </div>
+                   <a href="http://www.scitylab.org/html/new/" class="more">more...</a>
+               </div>
+               </div>
+
+
+               <div class="index_main_bottom">
+                  <ul>
+                  <li>
+                  <h3><span>Standard evaluation</span><a href="http://www.scitylab.org/html/hot/" target="_blank">标准评价</a></h3>
+                  <p><a href="http://www.scitylab.org/html/hot/" target="_blank"><img src="/static/img/home/c_photo1.jpg"></a></p>
+                  </li>
+                  <li>
+                  <h3><span>Project case</span><a href="http://www.scitylab.org/html/work/am4/" target="_blank">项目案例</a></h3>
+                  <p><a href="http://www.scitylab.org/html/work/am4/" target="_blank"><img src="/static/img/home/c_photo2.jpg"></a></p>
+                  </li>
+                  <li>
+                  <h3><span>Forum</span><a href="http://www.scitylab.org/html/question/lc1/" target="_blank">论坛</a></h3>
+                  <p><a href="http://www.scitylab.org/html/question/lc1/" target="_blank"><img src="/static/img/home/c_photo3.jpg"></a></p>
+                  </li>
+                  <li>
+                  <h3><span>WeChat</span><!-- <a href="http://weixin.qq.com/r/E0gKEoPE4t6drcdx9x0B"> --><a>微信</a></h3>
+                  <dl>
+                  <dt><img src="/static/img/home/weixin.jpg"></dt>
+                  <dd><h2>扫一扫 立即关注</h2><p>联合实验室官方微信</p></dd>
+                  </dl>
+                  </li>
+                  </ul>
+               </div>
+            </div>
+
+    <div class="index_main">
+            <div class="index_body">
+              <div class="thh2" style="text-indent:10px;"><h2>Member Unit│成员单位</h2></div>
+              <div class="effect">
+                    <div id="focusBox1" class="focusBox1">
+                        <div class="bd">
+                            <ul>
+                                <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/63.html"><img src="/static/img/home/1.png" alt="中兴"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/64.html"><img src="/static/img/home/2.png" alt="Microsoft"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/65.html"><img src="/static/img/home/3.png" alt="IBM"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/66.html"><img src="/static/img/home/4.png" alt="华为"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/67.html"><img src="/static/img/home/5.png" alt="现代快报"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/68.html"><img src="/static/img/home/6.png" alt="航天科工"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/69.html"><img src="/static/img/home/7.png" alt="软通动力"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/70.html"><img src="/static/img/home/8.png" alt="百度"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/71.html"><img src="/static/img/home/1505111406191095.png" alt="东方道迩"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/72.html"><img src="/static/img/home/1505111406492896.png" alt="国家信息安全工程技术研"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/73.html"><img src="/static/img/home/1505111407176667.png" alt="经济杂志社"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/74.html"><img src="/static/img/home/1505111407363965.png" alt="现代快报"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/75.html"><img src="/static/img/home/1505111407527603.png" alt="日历中国"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/76.html"><img src="/static/img/home/1505111408163248.png" alt="中国地下空间有限公司"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/77.html"><img src="/static/img/home/1505111408404983.png" alt="益邦"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/78.html"><img src="/static/img/home/1505111409039286.png" alt="芬兰共和国就业与经济部"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/79.html"><img src="/static/img/home/1505111409248329.png" alt="振邦"></a>
+                                </div>
+                            </li>
+    <li>
+                                <div class="art_box">
+                                    <a href="http://www.scitylab.org/html/about/as3/80.html"><img src="/static/img/home/1-150Z91A542426.png" alt="果实网"></a>
+                                </div>
+                            </li>
+
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+            </div>
+          </div>
+
+{% endblock %}
+{% block left %}
+
+{% endblock %}
+
+{% block right %}
+
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+$(function(){
+	$("#wx").hover(function(){
+		$(".img_set").show();
+	},function(){
+		$(".img_set").hide();
+	});
+})
+</script>
+    <script type="text/javascript">
+    function AddFavorite(sURL, sTitle){
+        try    {        window.external.addFavorite(sURL, sTitle);    }
+        catch (e)    {
+        try        {            window.sidebar.addPanel(sTitle, sURL, "");
+        }
+        catch (e)
+        {            alert("加入收藏失败，请使用Ctrl+D进行添加");        }    }
+        }
+    </script>
+    <script>
+        $(function(){
+            $('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:0
+					},200);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log(current);
+					};
+				}
+			});
+		});
+	</script>
+    <script type="text/javascript">cssdropdown.startchrome("jsddm")</script>
+{% endblock %}

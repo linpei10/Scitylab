@@ -1,0 +1,11 @@
+1、Scitylab、website、venv为python文件夹
+2、static为静态文件，存放js、css、img等
+3、templates 是html页面。
+
+templates文件夹说明：
+base.html base_news.html 为母板
+download.html 是下载中心页面
+home.html 是官网首页
+news.html 是科研领域首页
+pm6.html 是科研领域--数字仿真研究院页面
+pmc1.html 是科研领域--城市环境仿真页面
