@@ -56,10 +56,19 @@ def send_mail(user_select, to_mail_list):
     for i in user_select:
         path.format(filename=files_list[i])
         shutil.copy(path, zip_path)
-    text = open(file_path, 'rb').read()
-    file_name = os.path.basename(file_path)
+    # 将zip目录进行压缩
+    file_zip = 'file.zip'
+    f = zipfile.ZipFile(file_zip, 'w', zipfile.ZIP_DEFLATED)
+    for paths, filepath, filenames in os.walk(zip_path):
+        for filename in filenames:
+            f.write(os.path.join(zip_path, filename))
+    f.close()
+    # 读取并发送邮件
+    text = open(file_zip, 'rb').read()
+
+    file_name = os.path.basename(file_zip)
     # 对文件进行编码处理
-    b = make_header([(file_name, 'utf-8')]).encode('utf-8')
+    b = make_header([(file_zip, 'utf-8')]).encode('utf-8')
     msg.attach(b, text)
     # msg.attach_file(file_path)
     msg.send()
@@ -68,7 +77,6 @@ def send_mail(user_select, to_mail_list):
     else:
         print('******************发送失败*********************')
     print('********************发送完成********************')
-
 
 
 def home(req):
@@ -106,11 +114,10 @@ def download(req):
                 "company": company}
         models.Customer.objects.create(**info)
 
+        file_num_list = req.POST.getlist("file_num")
 
+        send_mail(file_num_list, email)
 
-
-
-
-        return render(req,"download.html")
+        return redirect('/html/download/')
 
     return render(req, "download.html")

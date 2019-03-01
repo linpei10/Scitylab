@@ -1262,7 +1262,6 @@ div.dow_info{
     height: 22px;
     font-size: 16px;
     margin: 5px 50px;
-    font-family: 仿宋;
     border:1px solid #00CCFF;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
@@ -1313,8 +1312,7 @@ div.dow_info{
 
 .scroll{
     position: fixed;
-    bottom: 370px;
-    left: 28%;
+    top: 321px;
     margin-left: 8px;
     width: 100px;
     height: 230px;
@@ -1374,8 +1372,7 @@ div.dow_info{
     position: fixed;
     width: 18px;
     height: 13px;
-    bottom: 560px;
-    left: 535px;
+    top: 348px;
     background: transparent url(/static/img/ico/icos.gif) -271px -38px no-repeat;
     z-index: 1001;
 }
