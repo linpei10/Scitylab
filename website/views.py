@@ -101,18 +101,18 @@ def pmc1(req):
 
 def download(req):
     if req.method == "POST":
-        name = req.POST.get("name")
-        phone = req.POST.get("phone")
-        email = req.POST.get("email")
-        post = req.POST.get("post")
-        company = req.POST.get("company")
-
-        info = {"name": name,
-                "phone": phone,
-                "email": email,
-                "post": post,
-                "company": company}
-        models.Customer.objects.create(**info)
+        # name = req.POST.get("name")
+        # phone = req.POST.get("phone")
+        # email = req.POST.get("email")
+        # post = req.POST.get("post")
+        # company = req.POST.get("company")
+        #
+        # info = {"name": name,
+        #         "phone": phone,
+        #         "email": email,
+        #         "post": post,
+        #         "company": company}
+        # models.Customer.objects.create(**info)
 
         file_num_list = req.POST.getlist("file_num")
 

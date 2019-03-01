@@ -1197,7 +1197,7 @@ h4.shg{
     background-color: #eee;
 }
 
-.dow_download a{
+.dow_download a input{
     display: inline-block;
     height: 50px;
     width: 200px;
