@@ -5,9 +5,9 @@
 <title>科研领域 > 仿真中心_中国城市科学研究会智慧城市联合实验室</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="/static/css/home_conmon.css" rel="stylesheet" media="screen" type="text/css" />
-<link href="/static/css/home_index.css" rel="stylesheet" media="screen" type="text/css" />
 <link href="/static/css/bdsstyle.css" rel="stylesheet" type="text/css">
+<link href="/static/css/conmon.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/static/css/index.css" rel="stylesheet" media="screen" type="text/css" />
 <script language="javascript" type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>	<script type="text/javascript">function setinfobox(o,total,key){for(i=1;i<=total;i++){document.getElementById(key+'bu'+i).className = "air" ;}document.getElementById(key+'bu'+o).className = "cur" ;document.getElementById(key+"info").innerHTML=document.getElementById(key+"info"+o).innerHTML;}</script>
 <script language="JavaScript" type='text/javascript' src='/static/js/dropdown.js'></script>
 <script language="javascript" type="text/javascript" src="/static/js/dedeajax2.js"></script>
@@ -63,21 +63,36 @@
         </ul>
     </div>
 </div>
+
  </div>
+
+ {% block content %}
+
+ {% endblock %}
+
+
+{% block main %}
+
+
+{#    <div class="list_right">#}
+{#        <div class="position">#}
+{#		  		  <P class="hgrh"><a href="javascript:void(0)">数字仿真研究院简介</a></P>#}
+{#					<P class="hgrh11">当前位置：<a href='/'>主页</a> > <a href='/html/news'>科研领域</a> > <a href='/html/news/pm6/'>数字仿真研究院简介</a></P>#}
+{#				</div>#}
+{#        <div class="art_2"></div>#}
+{#	<div class="lmbody">#}
+{#    </div>#}
+{#    </div>#}
+
+
+{% endblock %}
+
 
 
 {% block body %}
 
 {% endblock %}
- {#    悬浮窗#}
-        <div class="xuanfu">
 
-            <img src="/static/img/home/weixin.jpg">
-            <ul>
-                <li>联合实验室官方微信</li>
-                <li>扫码关注</li>
-            </ul>
-        </div>
 
 
 <div class="foomt">

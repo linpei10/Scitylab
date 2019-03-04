@@ -1,10 +1,17 @@
-{% extends 'base_news.html' %}
+{% extends 'base.html' %}
 
-{% block left %}
-<div class="list_left">
+{% block content %}
+     <div id="container">
+         <img src="/static/img/home/1-150R4102A2427.jpg" >
+		</div>
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <div class="list_left">
 
     <div class="lframe">
-<a href="/html/news/"><h3>科研领域</h3></a>
+        <a href="/html/news/"><h3>科研领域</h3></a>
     <div class="mt">
 		<ul>
             <li><a href='/html/news/pm6/'>数字仿真研究院</a> </li>
@@ -23,13 +30,9 @@
     <div class="leftbase">
 
     </div>
-</div>
-{% endblock %}
+    </div>
 
 
-
-
-{% block right %}
 
     <div class="list_right">
         <div class="position">
@@ -393,7 +396,7 @@
 
 
 
-
+</div>
 {% endblock %}
 
 {% block script %}

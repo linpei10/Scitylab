@@ -1,18 +1,27 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 # Create your views here.
 from website import models
 from django.conf import settings
-from django.core.mail import EmailMultiAlternatives
+import threading
+from multiprocessing import Process
+from django.core.mail import EmailMessage
 from email.header import make_header
 import os
 import shutil
 from email.header import Header
 import zipfile
+from django.contrib.sessions.backends.db import SessionStore
 
-path = ''.join([os.path.dirname(os.getcwd()).replace('\\', '/'), '/static/file/{filename}.pdf'])
+# 文件存放路径
+path = ''.join([os.path.dirname(os.getcwd()).replace('\\', '/'), 'Scitylab/static/file/{filename}.pdf'])
 
-zip_path = ''.join([os.path.dirname(os.getcwd()).replace('\\', '/'), 'zip'])
+# 多进程列表
+Pro = []
+# 压缩后的文件路径
+# zip_path = ''.join([os.path.dirname(os.getcwd()).replace('\\', '/'), 'zip'])
 
+# 用户登陆前的页面url
+before_url = '/html/'
 files_list = {
     '001': '李迅—城市发展新时代、新理念、新方法',
     '002': 'Michael Mulquin—Becoming a data driven city',
@@ -36,6 +45,26 @@ files_list = {
 }
 
 
+# def auth(func):
+#     def inner(request, *args, **kwargs):
+#         is_login = request.session.get('is_login')
+#         if is_login:
+#             return func(request, *args, **kwargs)
+#         else:
+#             return redirect('/html/login/')
+#     return inner
+
+
+def auth(func):
+    def inner(request, *args, **kwargs):
+        is_login = request.session.get('is_login')
+        if is_login:
+            return func(request, *args, **kwargs)
+        else:
+            return redirect('/html/login/')
+    return inner
+
+
 def send_mail(user_select, to_mail_list):
     '''
         发送带附件邮件函数
@@ -44,51 +73,101 @@ def send_mail(user_select, to_mail_list):
             file_path:          附件绝对路径地址
     '''
     print('**************开始生成消息*********************')
-    subject = '报告邮件'
+    subject = 'test'
     text_content = '这是一封重要的报告邮件.'
-    html_content = '<p>这是一封<strong>重要的报告邮件</strong>.</p>'
     from_email = settings.EMAIL_HOST_USER
-    msg = EmailMultiAlternatives(subject, text_content, from_email, to_mail_list)
-    msg.attach_alternative(html_content, "text/html")
+    msg = EmailMessage(subject,
+                       text_content,
+                       from_email,
+                       to_mail_list)
     # 发送附件
     print('********************发送附件********************')
-    # 将用户所选中文件复制到zip目录
-    for i in user_select:
-        path.format(filename=files_list[i])
-        shutil.copy(path, zip_path)
-    # 将zip目录进行压缩
-    file_zip = 'file.zip'
-    f = zipfile.ZipFile(file_zip, 'w', zipfile.ZIP_DEFLATED)
-    for paths, filepath, filenames in os.walk(zip_path):
-        for filename in filenames:
-            f.write(os.path.join(zip_path, filename))
-    f.close()
-    # 读取并发送邮件
-    text = open(file_zip, 'rb').read()
+    # # 将用户所选中文件复制到zip目录
+    # for i in user_select:
+    #     path.format(filename=files_list[i])
+    #     shutil.copy(path, zip_path)
+    # # 将zip目录进行压缩
+    # file_zip = 'file.zip'
+    # f = zipfile.ZipFile(file_zip, 'w', zipfile.ZIP_DEFLATED)
+    # for paths, filepath, filenames in os.walk(zip_path):
+    #     for filename in filenames:
+    #         f.write(os.path.join(zip_path, filename))
+    # f.close()
+    # # 读取并发送邮件
+    #
+    # text = open(file_zip, 'rb').read()
+    #
+    # # file_name = os.path.basename(file_zip)
+    # # 对文件进行编码处理
+    # b = make_header([(file_zip, 'utf-8')]).encode('utf-8')
+    # msg.attach(b, text)
+    # # msg.attach_file(file_path)
+    # msg.send()
+    # try:
+    #     os.remove(file_zip)
+    #     for i in zip_path:
+    #         os.remove(zip_path + '/' + i)
+    # except:
+    #     print("删除失败")
 
-    file_name = os.path.basename(file_zip)
-    # 对文件进行编码处理
-    b = make_header([(file_zip, 'utf-8')]).encode('utf-8')
-    msg.attach(b, text)
-    # msg.attach_file(file_path)
-    msg.send()
+    for i in user_select:
+        msg.attach_file(path.format(filename=files_list[i]))
+        print(path.format(filename=files_list[i]))
+
+    msg.send(fail_silently=False)
     if msg.send():
-        print('******************发送成功*********************')
-    else:
-        print('******************发送失败*********************')
-    print('********************发送完成********************')
+        print(111)
+
+
+@auth
+def download(req):
+    email_list = []
+    if req.method == "POST":
+        current_user = req.session.get('username')
+        email_list.append(current_user)
+        file_num_list = req.POST.getlist('file_num')
+        print(file_num_list)
+        if current_user:
+            p = Process(target=send_mail, args=(file_num_list, email_list))
+            Pro.append(p)
+            p.start()
+            # t1 = threading.Thread(target=send_mail, args=(file_num_list, email_list))
+            # t1.start()
+            # send_mail(file_num_list, email_list)
+            return redirect('/html/download/')
+    return render(req, "download.html")
+
+
+def login(req):
+    message = ''
+    if req.method == 'POST':
+        user = req.POST.get('email')
+        pwd = req.POST.get('password')
+        print(user, pwd)
+
+        check = models.UserInfo.objects.filter(email=user, password=pwd).count()
+        if check:
+            print(111)
+            req.session['is_login'] = True
+            req.session['username'] = user
+            name = models.UserInfo.objects.filter(email=user).values('name')[0]
+            req.session['name'] = name
+            print(name)
+            rep = redirect(before_url)
+            return rep
+        else:
+            message = "用户名或密码错误"
+    print(222)
+    obj = render(req, 'login.html', {'msg': message})
+    return obj
 
 
 def home(req):
-    return render(req,"home.html")
+    return render(req, "html.html")
 
 
 def news(req):
     return render(req, "news.html")
-
-
-def base_news(req):
-    return render(req, "base_news.html")
 
 
 def pm6(req):
@@ -99,25 +178,6 @@ def pmc1(req):
     return render(req, "pmc1.html")
 
 
-def download(req):
-    if req.method == "POST":
-        # name = req.POST.get("name")
-        # phone = req.POST.get("phone")
-        # email = req.POST.get("email")
-        # post = req.POST.get("post")
-        # company = req.POST.get("company")
-        #
-        # info = {"name": name,
-        #         "phone": phone,
-        #         "email": email,
-        #         "post": post,
-        #         "company": company}
-        # models.Customer.objects.create(**info)
-
-        file_num_list = req.POST.getlist("file_num")
-
-        send_mail(file_num_list, email)
-
-        return redirect('/html/download/')
-
-    return render(req, "download.html")
+if __name__ == '__main__':
+    for i in Pro:
+        i.join()

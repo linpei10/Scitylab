@@ -169,6 +169,9 @@ $(function () {
 		}
 
 	});
+
+
+
 	// 轮播图
 	$(".outer .num li").mouseover(function () {
 		$(this).addClass("current_1").siblings().removeClass("current_1");
@@ -211,7 +214,7 @@ $(function () {
 	});
 
 	$(".left_btn").click(function () {
-
+        moveL()
 	});
 
 

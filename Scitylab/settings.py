@@ -132,9 +132,11 @@ STATICFILES_DIRS = [
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_USE_TLS = False
 EMAIL_HOST = 'smtp.exmail.qq.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'lilinpei@scitylab.org'
 EMAIL_HOST_PASSWORD = 'Li940926'
+EMAIL_USE_SSL = True
+
+
 DEFAULT_FROM_EMAIL = 'lilinpei@scitylab.org'

@@ -13,13 +13,11 @@
 <link href="/static/css/video-js.min.css" rel="stylesheet" media="screen" type="text/css" />
 <script language="javascript" type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>	<script type="text/javascript">function setinfobox(o,total,key){for(i=1;i.lt(total);i++){document.getElementById(key+'bu'+i).className = "air" ;}document.getElementById(key+'bu'+o).className = "cur" ;document.getElementById(key+"info").innerHTML=document.getElementById(key+"info"+o).innerHTML;}</script>
 <script language="JavaScript" type='text/javascript' src='/static/js/dropdown.js'></script>
-<script language="JavaScript" type='text/javascript' src='/static/js/video.min.js'></script>
-
-
-
-
 
 </head>
+
+
+
 <body class="channel">
 {#<div style="display: none" class="password1">#}
  <div class="nav_box"><div id="head0">
@@ -65,7 +63,7 @@
 </div>
  	<div id="container">
          <img src="/static/img/home/1-150R4102A2427.jpg" >
-		</div>
+	</div>
 <div class="main">
 
 {#左侧菜单栏开始#}
@@ -130,18 +128,6 @@
 </UL>
 <p>Copyright © Brimrose Corporation of National Smart City Joint Lab 版权所有复制必究</p>
  </div>
-<!--  <div class="fk_set">
- 	<p class="p_set"><img src="/templets/default/images/pic1.jpg" /><span>开始文档管理 专业文档管理</span></p>
-    <ul class="con_list">
-    	<li><a href="#">开始文档管理 专业文档管理</a></li>
-        <li><a href="#">开始文档管理 专业文档管理</a></li>
-        <li><a href="#">开始文档管理 专业文档管理</a></li>
-        <li><a href="#">开始文档管理 专业文档管理</a></li>
-        <li><a href="#">开始文档管理 专业文档管理</a></li>
-        <li><a href="#">开始文档管理 专业文档管理</a></li>
-        <li><a href="#">开始文档管理 专业文档管理</a></li>
-    </ul>
- </div> -->
 <script type="text/javascript">
 function AddFavorite(sURL, sTitle)
 	{
@@ -282,18 +268,11 @@ function AddFavorite(sURL, sTitle)
 
 	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
  </script>
-
-<!-- /footer -->
-
-
-<!-- /footer -->
 </body>
-
-{% block script %}
-
-{% endblock %}
-
 
 
 </html>
 
+{% block script %}
+
+{% endblock %}
