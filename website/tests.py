@@ -41,6 +41,7 @@ def bar(n):                  #子线程
     time.sleep(8)
     print('end bar')
 
+
 t1 = threading.Thread(target = foo,args = (1,))
 t2 = threading.Thread(target = bar,args = (2,))
 
@@ -51,22 +52,22 @@ print('======================')  #主进程
 
 t1.join()
 t2.join()
-end = time.time()
-print(end - start)
+# end = time.time()
+# print(end - start)
 """
 #IO 密集型任务或函数（转换次数非常多） 计算密集型任务或函数
 """
-import time
-begin = time.time()
-
-def add(n):
-    sum = 0
-    for i in range(n):
-        sum += i
-    print(sum)
-
-add(100000000)
-add(100000000)
+# import time
+# begin = time.time()
+#
+# def add(n):
+#     sum = 0
+#     for i in range(n):
+#         sum += i
+#     print(sum)
+#
+# add(100000000)
+# add(100000000)
 
 # t1 = threading.Thread(target = add,args = (100000000,))
 # t1.start()
@@ -74,7 +75,7 @@ add(100000000)
 # t2.start()
 # t1.join()
 # t2.join()
-end = time.time()
-print(end - begin)
+# end = time.time()
+# print(end - begin)
 #12.32570505142212
 #12.405709505081177

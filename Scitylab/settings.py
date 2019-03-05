@@ -137,6 +137,8 @@ EMAIL_PORT = 465
 EMAIL_HOST_USER = 'lilinpei@scitylab.org'
 EMAIL_HOST_PASSWORD = 'Li940926'
 EMAIL_USE_SSL = True
-
-
 DEFAULT_FROM_EMAIL = 'lilinpei@scitylab.org'
+
+
+BROKER_URL = 'redis://192.168.100.36:6379/0'
+BROKER_TRANSPORT = 'redis'

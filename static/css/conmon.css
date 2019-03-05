@@ -7,7 +7,7 @@
  .dropMenu ul li a:hover {color: #fff;background:#1d78c4;text-decoration:underline}
  .dropMenu ul li a {color: #fff;display: block;font-size: 14px;line-height: 35px;}
  #goTopBtn {	POSITION: fixed; TEXT-ALIGN: center; LINE-HEIGHT: 30px; WIDTH: 39px; BOTTOM: 80px; HEIGHT: 33px; FONT-SIZE: 12px; CURSOR: pointer; RIGHT: 72px; _position: absolute; _right: auto}
- .leftbase .index_l1{padding-bottom:7px;} 
+ .leftbase .index_l1{padding-bottom:7px;}
  .position p.hgrh{text-align:left;float:left; background:#3d7bc7; padding-left:20px;color:#fff;padding-right:20px;}
   .position p.hgrh11{float:right;margin-right:10px;}
   .position p.hgrh a{font-size:16px;color:#fff;font-family:微软雅黑;}
@@ -15,7 +15,7 @@
  .list_left p.tit1{background:url(/static/img/home/tit1.png) no-repeat left center;}
  .list_left p.tit2{background:url(/static/img/home/tit2.png) no-repeat left center;}
  .list_right{float:right;width:747px;height:100%;overflow:hidden;padding-bottom:20px;}
- .position {font-size: 12px;line-height: 50px;height:52px;color: #666;overflow:hiddenn;background:#f6f6f6;} 
+ .position {font-size: 12px;line-height: 50px;height:52px;color: #666;overflow:hiddenn;background:#f6f6f6;}
  .position a {color: #666;font-size:12px;}
  .main{z-index:1000;width:1000px;margin:0 auto 20px;overflow:hidden;min-height:400px;overflow:hidden; background:#fff;padding:15px 20px}
  .art_field{overflow:hidden;}
@@ -149,7 +149,7 @@
 	min-height:100px;overflow:hidden;
 }
 .lframe .md h2 {
-   
+
 }
 .lframe .md span.p1 {
     color: #CCCCCC;
@@ -160,7 +160,7 @@
     color: #FFFFFF;
     font-family: 微软雅黑;
     font-size: 22px;
-  
+
     line-height: 65px;
 }
 .focusBox1 .bd ul li{width:116px;height:41px;float:left;margin:0px 10px 10px 10px; background:url("/static/img/home/box_img.png") no-repeat 0 0;}
@@ -220,7 +220,7 @@
 .nop3 dl dd p{line-height:26px;color:#333;font-size:12px;}
 .nop3 dl{overflow:hidden;padding:10px 0px;}
 .nop4 h4{color:#b9301f;font-size:14px;background:url(/static/img/home/kuai.png) no-repeat left center;}
-.nop4 p{line-height:24px;color:#333;font-size:12px;} 
+.nop4 p{line-height:24px;color:#333;font-size:12px;}
 .index_main00{width:1000px;min-height:520px;
     overflow:hidden;margin:0 auto; background:#fff;padding:15px 20px;}
 	.foomt ul{overflow:hidden;width:340px;margin:0 auto;padding:20px 0px 5px 0px;}
@@ -247,7 +247,7 @@
     overflow: hidden;
     width: 100%;
 	}
-	.art_list ul li{overflow:hidden;padding:10px 0px;/* border-bottom:1px dotted #eee;*/} 
+	.art_list ul li{overflow:hidden;padding:10px 0px;/* border-bottom:1px dotted #eee;*/}
 	.bvt{overflow:hidden;float:right;margin-top:25px; margin-left:20px;}
 	.art_list ul li h2 a{font-weight:700;font-size:18px;color:#333;}
 	.art_list ul li p a{font-size:12px;color:#333;}
@@ -1784,10 +1784,10 @@ div.dow_info{
 }
 
 
-
-
-
-
+/*登陆注册*/
+.login{
+    font-size: 14px;
+}
 
 
 
