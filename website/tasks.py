@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.core.mail import EmailMessage
-from celerys import app
+from Scitylab.celery import app
 import os
 
 path = ''.join([os.path.dirname(os.getcwd()).replace('\\', '/'), 'Scitylab/static/file/{filename}.pdf'])
@@ -29,7 +29,8 @@ files_list = {
 
 
 @app.task
-def send_mail(user_select, to_mail_list):
+def send_mail():
+# def send_mail(user_select, to_mail_list):
 
     print('**************开始生成消息*****************')
     subject = 'test'
@@ -38,10 +39,10 @@ def send_mail(user_select, to_mail_list):
     msg = EmailMessage(subject,
                        text_content,
                        from_email,
-                       to_mail_list)
+                       ['1005819387@qq.com', ])
 
-    for i in user_select:
-        msg.attach_file(path.format(filename=files_list[i]))
-        print(path.format(filename=files_list[i]))
+    # for i in user_select:
+    #     msg.attach_file(path.format(filename=files_list[i]))
+    #     print(path.format(filename=files_list[i]))
 
     msg.send(fail_silently=False)

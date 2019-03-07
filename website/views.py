@@ -12,7 +12,7 @@ def auth(func):
         if is_login:
             return func(request, *args, **kwargs)
         else:
-            return redirect('/html/login/')
+            return redirect('/login/')
     return inner
 
 
@@ -25,13 +25,15 @@ def download(req):
         file_num_list = req.POST.getlist('file_num')
         print(file_num_list)
         if current_user:
-            send_mail.delay(file_num_list, email_list)
+            # send_mail.delay(file_num_list, email_list)
+            send_mail.delay()
             return redirect('/html/download/')
     return render(req, "download.html")
 
 
 def login(req):
     message = ''
+    name = ''
     if req.method == 'POST':
         user = req.POST.get('email')
         pwd = req.POST.get('password')
@@ -42,15 +44,16 @@ def login(req):
             print(111)
             req.session['is_login'] = True
             req.session['username'] = user
-            name = models.UserInfo.objects.filter(email=user).values('name')[0]
+            name = models.UserInfo.objects.filter(email=user).values('name')[0]['name']
             req.session['name'] = name
             print(name)
             rep = redirect(before_url)
             return rep
         else:
             message = "用户名或密码错误"
+            print(message)
     print(222)
-    obj = render(req, 'login.html', {'msg': message})
+    obj = render(req, 'login.html', {'msg': message, 'username': name})
     return obj
 
 

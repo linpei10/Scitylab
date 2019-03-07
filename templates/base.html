@@ -39,18 +39,18 @@
                             <a href="">中/</a>
                             <a href="">En</a>
                             <a class="a1" href="http://weibo.com/Scitylab/profile?rightmod=1&wvr=6&mod=personinfo" target=_blank></a>
-                            <a class="a2" href="javascript:;" id="wx"></a>
+                            <a class="a2" href="javascript:void (0);" id="wx"></a>
                         </p>
                     </div>
                     <div class="login">
-                        {% if username %}
-                            <a href="/info">{{ username }}</a>
-                            /
-                            <a href="/login">退出</a>
+                        {% if request.session.name %}
+                            <a href="/info/">{{ request.session.name }}</a>
+                            ,
+                            <a href="/login/">退出</a>
                         {% else %}
-                            <a href="/login">登陆</a>
+                            <a href="/login/">登陆</a>
                             /
-                            <a href="/sigup">注册</a>
+                            <a href="/sigup/">注册</a>
                         {% endif %}
                     </div>
 					<div class="l_zwxccc">

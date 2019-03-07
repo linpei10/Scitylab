@@ -20,7 +20,7 @@ from django.conf.urls import url
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('^html/$', views.home),
-    url('^html/login/$', views.login),
+    url('^login/$', views.login),
     url('^html/news/$', views.news),
     url('^html/news/pm6/$', views.pm6),
     url('^html/news/pmc1/$', views.pmc1),
