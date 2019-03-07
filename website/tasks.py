@@ -29,20 +29,19 @@ files_list = {
 
 
 @app.task
-def send_mail():
-# def send_mail(user_select, to_mail_list):
+def send_mail(user_select, to_mail_list):
 
     print('**************开始生成消息*****************')
-    subject = 'test'
-    text_content = '这是一封重要的报告邮件.'
+    subject = '智慧城市相关资料'
+    text_content = '欢迎下载！'
     from_email = settings.EMAIL_HOST_USER
     msg = EmailMessage(subject,
                        text_content,
                        from_email,
-                       ['1005819387@qq.com', ])
+                       to_mail_list)
 
-    # for i in user_select:
-    #     msg.attach_file(path.format(filename=files_list[i]))
-    #     print(path.format(filename=files_list[i]))
+    for i in user_select:
+        msg.attach_file(path.format(filename=files_list[i]))
+        print(path.format(filename=files_list[i]))
 
     msg.send(fail_silently=False)

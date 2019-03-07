@@ -25,8 +25,7 @@ def download(req):
         file_num_list = req.POST.getlist('file_num')
         print(file_num_list)
         if current_user:
-            # send_mail.delay(file_num_list, email_list)
-            send_mail.delay()
+            send_mail.delay(file_num_list, email_list)
             return redirect('/html/download/')
     return render(req, "download.html")
 
