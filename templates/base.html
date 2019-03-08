@@ -46,9 +46,9 @@
                         {% if request.session.name %}
                             <a href="/info/">{{ request.session.name }}</a>
                             ,
-                            <a href="/login/">退出</a>
+                            <a href="/logout/?next={{ request.path }}">退出</a>
                         {% else %}
-                            <a href="/login/">登陆</a>
+                            <a href="/login/?next={{ request.path }}">登陆</a>
                             /
                             <a href="/sigup/">注册</a>
                         {% endif %}
@@ -72,7 +72,7 @@
         <ul id="jsddm">
 		    <li><a href="/html/" >首页</a></li>
             <li><a href='/html/about/' id="navmenu1" rel="dropmenu1">机构概况</a> </li>
-            <li><a href='/html/news/' id="navmenu4" rel="dropmenu4">科研领域</a> </li>
+            <li><a href='/html/news/?next={{ req.path }}' id="navmenu4" rel="dropmenu4">科研领域</a> </li>
             <li><a href='/html/hot/' id="navmenu5" rel="dropmenu5">标准评价</a> </li>
             <li><a href='/html/work/' id="navmenu3" rel="dropmenu3">规划咨询</a> </li>
             <li><a href='/html/funs/' id="navmenu2" rel="dropmenu2">学术成果</a> </li>

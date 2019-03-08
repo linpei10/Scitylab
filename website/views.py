@@ -3,7 +3,6 @@ from django.shortcuts import render, redirect
 from website import models
 from .tasks import send_mail
 # 用户登陆前的页面url
-before_url = '/html/'
 
 
 def auth(func):
@@ -36,24 +35,39 @@ def login(req):
     if req.method == 'POST':
         user = req.POST.get('email')
         pwd = req.POST.get('password')
-        print(user, pwd)
 
         check = models.UserInfo.objects.filter(email=user, password=pwd).count()
         if check:
-            print(111)
+
             req.session['is_login'] = True
             req.session['username'] = user
             name = models.UserInfo.objects.filter(email=user).values('name')[0]['name']
             req.session['name'] = name
-            print(name)
+            before_url = req.GET.get('next', '/html/')
             rep = redirect(before_url)
             return rep
         else:
             message = "用户名或密码错误"
             print(message)
-    print(222)
     obj = render(req, 'login.html', {'msg': message, 'username': name})
     return obj
+
+
+def logout(req):
+    req.session.clear()
+    before_url = req.GET.get('next', '/html/')
+    if before_url == '/html/download/':
+        return redirect('/html/')
+    else:
+        return redirect(before_url)
+
+
+def sigup(req):
+    return render(req, 'sigup.html')
+
+
+def info(req):
+    return render(req, 'info.html')
 
 
 def home(req):

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+.qy_index_btn_Blue {
+  color: #FFF !important;
+  background: #4B6EA4;
+  border: 1px solid #4B6EA4;
+  font-size: 12px;
+}
+
+.qy_index_btn_Blue:hover {
+  opacity: .8;
+  background: #4B6EA4;
+  border: 1px solid #4B6EA4;
+}
+
+.qy_index_btn_Blue:active, .qy_index_btn_Blue_Active {
+  opacity: .8;
+  background: #4B6EA4;
+}
+
+.qy_index_btn_Blue[disabled], .qy_index_btn_Blue_Disabled, .qy_index_btn_Blue_Disabled:hover, .qy_index_btn_Blue[disabled]:hover {
+  opacity: 1;
+  background: rgba(75, 110, 164, 0.5);
+  color: #FFF;
+  border-color: rgba(75, 110, 164, 0.1);
+}
+
+.qy_index_btn_Large {
+  width: 172px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-indent: 2px;
+}
+
+.qy_index_btn_Big {
+  padding: 5px 16px;
+  font-size: 14px;
+}
+
+.qy_index_btn_High {
+  padding: 7px 30px;
+  font-size: 14px;
+}
+
+.qy_index_btn_normal {
+  font-size: 12px;
+  line-height: 17px;
+  padding: 4px 13px 5px;
+}
+
+.qy_index_btn_Dlg {
+  font-size: 13px;
+  line-height: 18px;
+  padding: 4px 10px;
+}
+
+/**
+ * _reset.scss
+ * @author Kayo
+ * @date 2014-10-30
+ *
+ * #reset
+ * #html5
+ */
+/* #reset */
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, pre, form, fieldset, legend {
+  margin: 0;
+}
+
+ul, ol, fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+th, td {
+  padding: 0;
+}
+
+table {
+  font-size: inherit;
+}
+
+fieldset, img {
+  border: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+body {
+  font-size: 12px;
+  line-height: 1.5;
+  background: #fff;
+  color: #323232;
+}
+
+h1, h2, h3, h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+body, input, textarea, select, button {
+  font-family: BlinkMacSystemFont, "Helvetica", "lucida Grande", "PingFang SC", "SCHeiti", "Microsoft YaHei";
+  outline: none;
+  -webkit-text-size-adjust: none;
+}
+
+input, textarea, select, button {
+  font-size: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
