@@ -66,6 +66,7 @@ def sigup(req):
     return render(req, 'sigup.html')
 
 
+@auth
 def info(req):
     return render(req, 'info.html')
 

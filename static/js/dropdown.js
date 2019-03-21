@@ -495,7 +495,59 @@ $(function () {
 
 
 
+$(function () {
+    $("button[class*=Button--link]").click(function () {
+            $(".change_").fadeIn();
+            $("html").style = 'overflow: hidden; margin-right: 17px;';
+            $("body").addClass("Modal--open")
+        });
 
+    $("button[class*=plains]").click(function () {
+        $(".change_").fadeOut();
+        $("div[class=change_list]").hide();
+    });
+    $("button[class*=button_list]").click(function () {
+        let $top = $(window).height() / 2 + 10;
+        let $left = ($(window).width() - $(".Modal-inner").width())/ 2 + 10;
+        $("div[class=change_list]").css({"position":"absolute","top":$top+"px","left":$left+"px"}).show()
+    });
+
+
+    $("button[class=Select-option]").click(function () {
+        $("#Popover18-toggle").text($(this).text());
+        $("div[class=change_list]").hide()
+    });
+
+    let countdown=60;
+   $(".CountingDownButton").click(function () {
+       let obj = $(this);
+       settime(obj);
+   });
+
+    function settime(obj) { //发送验证码倒计时
+    if (countdown === 0) {
+        obj.attr('disabled',false);
+        //obj.removeattr("disabled");
+        obj.text("获取验证码");
+        countdown = 60;
+        return;
+    } else {
+        obj.attr('disabled',true);
+        obj.text("重新发送(" + countdown + ")");
+        countdown--;
+    }
+    setTimeout(function() {
+        settime(obj) }
+        ,1000)
+    }
+
+
+    $(".Input").keyup(function () {
+        if ($(this).val().length === 6){
+            $(".VerificationDialogModal-button").removeAttr("disabled")
+        }
+    })
+});
 
 
 

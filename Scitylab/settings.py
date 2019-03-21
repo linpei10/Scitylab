@@ -142,3 +142,7 @@ DEFAULT_FROM_EMAIL = 'lilinpei@scitylab.org'
 
 BROKER_URL = 'redis://localhost:6379/0'
 BROKER_TRANSPORT = 'redis'
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
